@@ -1,9 +1,9 @@
 # Bread price prediction
-Task:
+## Task:
 
 Predict whether the average bread price will increase (binary outcome).
 
-Subtasks:
+## Subtasks:
 
 - Parse and load the file https://download.bls.gov/pub/time.series/ap/ap.data.3.Food into a dataframe
 - Create a dataframe for the historical average bread price (series id: APU0000702111)
