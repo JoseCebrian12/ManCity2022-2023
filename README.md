@@ -1,79 +1,43 @@
-# Manchester City Performance Analysis 2022/2023
+# Manchester City 2022/2023 Performance Analysis
 
 ## Objective:
 
-Analyze the performance of Manchester City during the 2022/2023 season across various metrics, including attacking performance, defensive actions, and trends over the season. This analysis will explore both individual player contributions and overall team performance using data from various competitions.
+Analyze the performance of Manchester City during the 2022/2023 season, a historic season where the club won the **treble** (Premier League, FA Cup, and UEFA Champions League). The analysis focuses on both team and individual player performance, with a particular emphasis on offensive and defensive metrics.
 
-## Subtasks:
+## Key Analyses:
 
-### 1. **Attacking Metrics Analysis**
-   - **Description**: Evaluate the attacking performance of players by analyzing goals (GF) and expected goals (xG) during the season.
-   - **Data Used**: Columns `Rendimiento_Gls.`, `Expectativa_xG`
-   - **Visualization**: Scatter plot showing the correlation between goals scored and expected goals (xG), with player images displayed at their respective data points.
-   - **Code**: Used `matplotlib`, `OffsetImage`, and `mplsoccer` to create a visually appealing plot.
-   
-   ![example_image](images/scatter_goals_xg.png)
+- **Offensive Metrics**: Analyzed goals scored (GF) and expected goals (xG), comparing players' actual performance against their expected output.
+- **Home vs Away Performance**: Compared goals scored, goals conceded, and xG across home and away matches.
+- **Defensive Metrics by Position**: Evaluated defensive contributions (tackles, blocks, interceptions) across different player positions.
+- **Key Player Comparison**: Highlighted the defensive strengths of key players such as Rodri, Rúben Dias, and Kyle Walker.
+- **Defensive Effectiveness in Duels**: Analyzed the success rate of players in defensive duels and the number of challenges attempted.
+- **Contributions per 90 Minutes**: Normalized defensive metrics to provide fair comparisons across players with different playing times.
+- **Defensive Actions in Different Zones**: Assessed the distribution of defensive actions across the defensive, middle, and attacking thirds of the pitch.
+- **Errors and Ball Losses**: Identified which players were most prone to defensive errors and lost challenges.
 
-### 2. **Home vs Away Performance**
-   - **Description**: Compare Manchester City's performance when playing at home versus away, focusing on metrics such as goals scored, goals conceded, and expected goals (xG).
-   - **Data Used**: Columns `GF`, `GC`, `xG`, `xGA`, `Sedes` (Home/Away)
-   - **Visualization**: Bar chart comparing goals, expected goals, and goals conceded for home and away matches.
+## Tools and Skills Demonstrated:
 
-### 3. **Defensive Metrics by Player Position**
-   - **Description**: Analyze how defensive contributions (tackles, blocks, interceptions) vary across different player positions (e.g., Defenders, Midfielders, Attackers).
-   - **Data Used**: Columns `Posc`, `Derribos_Tkl`, `Bloqueos_Bloqueos`, `Int`
-   - **Visualization**: Stacked bar chart showing defensive actions per position.
-
-### 4. **Key Players Defensive Comparison**
-   - **Description**: Compare the defensive contributions of key players such as Rodri, Rúben Dias, Kyle Walker, and John Stones in terms of tackles, blocks, and interceptions.
-   - **Data Used**: Columns `Jugador`, `Derribos_Tkl`, `Bloqueos_Bloqueos`, `Int`, `Err`
-   - **Visualization**: Bar chart comparing key defensive metrics for selected players.
-
-### 5. **Effectiveness in Defensive Duels**
-   - **Description**: Analyze the effectiveness of players in defensive duels, comparing the percentage of successful tackles (`Tkl%`) and the number of duels attempted.
-   - **Data Used**: Columns `Jugador`, `Desafíos_Tkl%`, `Desafíos_Att`
-   - **Visualization**: Scatter plot showing duel attempts vs. percentage of successful tackles, with the size of the points representing the number of duels.
-
-### 6. **Defensive Contributions per 90 Minutes**
-   - **Description**: Normalize defensive metrics per 90 minutes to provide a fair comparison of players who played different amounts of time during the season.
-   - **Data Used**: Columns `Jugador`, `Derribos_Tkl`, `Bloqueos_Bloqueos`, `Int`, `90 s`
-   - **Visualization**: Bar chart comparing defensive metrics (tackles, blocks, interceptions) per 90 minutes for each player.
-
-### 7. **Defensive Actions Across Different Zones**
-   - **Description**: Analyze where most of the defensive actions (tackles, blocks, interceptions) occur on the field — in the defensive, central, or attacking thirds.
-   - **Data Used**: Columns `Derribos_3.º def.`, `Derribos_3.º cent.`, `Derribos_3.º ataq.`
-   - **Visualization**: Stacked bar chart showing defensive actions per third of the field.
-
-### 8. **Errors and Ball Losses Analysis**
-   - **Description**: Investigate which players are more prone to making defensive errors and losing challenges during the season.
-   - **Data Used**: Columns `Jugador`, `Err`, `Desafíos_Pérdida`
-   - **Visualization**: Bar chart showing the number of defensive errors and lost challenges per player.
-
----
+- **Pandas**: For data processing, transformation, and analysis.
+- **Matplotlib & mplsoccer**: For creating visually engaging scatter plots, bar charts, and soccer-specific visualizations.
+- **Image Processing**: Integrated player images in visualizations using `PIL` and `OffsetImage`.
+- **Similarity Matching**: Used `difflib` to match player names with their images.
+- **Statistical Analysis**: Provided insights through statistical summaries (averages, percentages, etc.).
 
 ## Tools Used:
 
-- **Pandas**: For data parsing and analysis.
-- **Matplotlib**: For creating various visualizations, including scatter plots and bar charts.
-- **mplsoccer**: For generating soccer-specific visualizations, including player positioning and heatmaps.
-- **difflib**: To match player names with image files.
-- **PIL**: To manipulate and display player images in the plots.
-
----
+- **Pandas**: Data manipulation and preparation.
+- **Matplotlib**: Creating detailed visualizations.
+- **mplsoccer**: Specific soccer visualizations, including heatmaps and player pitch positioning.
+- **PIL**: For handling and embedding player images in the plots.
+- **difflib**: For fuzzy string matching of player names to image files.
 
 ## Running the Analysis:
 
-To replicate this analysis, follow these steps:
+To replicate this analysis:
 
-1. **Install the required packages**:
-   ```
+1. Install the necessary packages:
+   ```bash
    pip install pandas matplotlib mplsoccer pillow difflib
    ```
-2. **Download the datasets**: Ensure the datasets from FBref and Understat are properly loaded into the script.
-3. **Run the Python script**: The visualizations will be generated and saved to the `images/` directory.
-
----
-
-## Conclusion:
-
-This project demonstrates how various metrics, both defensive and offensive, can be analyzed to provide insights into Manchester City’s performance during the 2022/2023 season. The visualizations and statistical analyses highlight key trends and player performances, providing an in-depth look into the team’s tactics and efficiency.
+2. Load the datasets (FBref and Understat data).
+3. Run the provided notebook to generate the visualizations and insights.
