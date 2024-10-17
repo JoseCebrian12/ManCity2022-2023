@@ -1,5 +1,7 @@
 # Manchester City 2022/2023 Performance Analysis
 
+![Manchester City Performance](files/gvsxG.png)
+
 ## Objective:
 
 Analyze the performance of Manchester City during the 2022/2023 season, a historic season where the club won the **treble** (Premier League, FA Cup, and UEFA Champions League). The analysis focuses on both team and individual player performance, with a particular emphasis on offensive and defensive metrics.
