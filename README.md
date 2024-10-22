@@ -25,14 +25,6 @@ Analyze the performance of Manchester City during the 2022/2023 season, a histor
 - **Similarity Matching**: Used `difflib` to match player names with their images.
 - **Statistical Analysis**: Provided insights through statistical summaries (averages, percentages, etc.).
 
-## Tools Used:
-
-- **Pandas**: Data manipulation and preparation.
-- **Matplotlib**: Creating detailed visualizations.
-- **mplsoccer**: Specific soccer visualizations, including heatmaps and player pitch positioning.
-- **PIL**: For handling and embedding player images in the plots.
-- **difflib**: For fuzzy string matching of player names to image files.
-
 ## Running the Analysis:
 
 To replicate this analysis:
