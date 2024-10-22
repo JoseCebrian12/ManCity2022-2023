@@ -35,3 +35,6 @@ To replicate this analysis:
    ```
 2. Load the datasets (FBref and Understat data).
 3. Run the provided notebook to generate the visualizations and insights.
+
+To explore the insights:
+[View PDF Report](etl.pdf) 
